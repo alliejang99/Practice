@@ -6,7 +6,7 @@ function hadleClick(){
     title.classList.toggle(CLICKED_CLASS);
 }
 
-function init(){
+function init() {
     title.addEventListener("click", hadleClick);
 }
 
