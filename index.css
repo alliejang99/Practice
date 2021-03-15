@@ -1,7 +1,12 @@
-*{margin: 0; padding: 0;}
+*{
+    margin: 0;
+    padding: 0; 
+    user-select: none;
+}
 button {
     border:none;
     background: rgba(0,0,0,0);
+    cursor: pointer;
 }
 ul, li {
     list-style: none;
@@ -19,7 +24,9 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
+li {
+    text-align-last: left;
+}
 .btn {
     cursor: pointer;
 }
