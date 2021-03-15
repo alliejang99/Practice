@@ -8,6 +8,16 @@ module.exports = {
         extension: ['.js','.jsx']
     },
 
+    module: {
+        rules: [{
+            test: /\.jsx?/,
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env', '@babel/preset-react'],
+            },
+        }],
+    },
+
     entry: {
         app: ['./client'],
     }, // 입력
