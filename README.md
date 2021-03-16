@@ -22,7 +22,7 @@
 @babel/preset-react: 리액트
 bable-loader: 바벨과 웹팩 연결
 
-## 빌드시 오류
+### 빌드시 오류
 npm i -D @babel/plugin-proposal-class-properties
 
 + error 
