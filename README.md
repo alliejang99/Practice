@@ -14,6 +14,9 @@
 - webpack 
 - webpack-cli
 
+* npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D
+* npm i -D webpack-dev-server
+
 ## babel install
 ### npm i -D @babel/core @babel/preset-env @babel/preset-react bable-loader
 - @babel/core: 최신문법 변경
