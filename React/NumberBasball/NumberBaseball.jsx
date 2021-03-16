@@ -9,9 +9,12 @@ class NumberBaseball extends Component {
         result: '',
         value: '',
         answer: getNumbers(),
+        tries: [],
     };
 
-    onSubmitForm = () => {}
+    onSubmitForm = () => {
+
+    }
     onChangeInput = (e) => {
         e.preventDefault();
     }
@@ -27,6 +30,10 @@ class NumberBaseball extends Component {
                         onChange={(e)=>{onChangeInput}}
                     />
                 </form>
+                <div>시도: {this.state.tries.length} </div>
+                <ul>
+                    <li></li>
+                </ul>
             </>
         );
     }
