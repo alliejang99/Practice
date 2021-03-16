@@ -34,5 +34,11 @@ npm install --save-dev babel-core babel-loader babel-preset-env
 // webpack 설치
 npm install --save-dev webpack webpack-dev-server
 
+// bulid 오류: address already in use
+1. cmd
+2. netstate -ano
+3. PID -> 작업관리자 -> 세부정보 
+
+
 #### [참고]
 - https://chimimode.github.io/2019-07-26-webpack-babel-project-setting/
