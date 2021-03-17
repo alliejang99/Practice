@@ -15,10 +15,10 @@
 - webpack-cli
 
 * npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D
-* npm i -D webpack-dev-server
+* npm i -D --save-dev webpack webpack-dev-server
 
 ## babel install
-### npm i -D @babel/core @babel/preset-env @babel/preset-react bable-loader
+### npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader 
 - @babel/core: 최신문법 변경
 - @babel/preset-env: 환경에 맞게 변경
 - @babel/preset-react: jsx, js 변경
@@ -31,8 +31,6 @@ npm i -D @babel/plugin-proposal-class-properties
 + error 
 // babel 설치
 npm install --save-dev babel-core babel-loader babel-preset-env
-// webpack 설치
-npm install --save-dev webpack webpack-dev-server
 
 // bulid 오류: address already in use
 1. cmd
@@ -42,3 +40,10 @@ npm install --save-dev webpack webpack-dev-server
 
 #### [참고]
 - https://chimimode.github.io/2019-07-26-webpack-babel-project-setting/
+
+# INDEX
+- 반복문 : https://github.com/alliejang99/Practice/blob/master/React/WordRelay/WordRelay.jsx
+
+- 조건문 : 
+
+- props와 state 연결 : https://github.com/alliejang99/Practice/blob/master/React/NumberBasball/NumberBaseball.jsx

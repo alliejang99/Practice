@@ -1,5 +1,5 @@
-import React, { Component, createRef } from 'react';
-import Try from './Try';
+import React, { PureComponent, createRef } from 'react';
+import Try_class from './Try_class';
 
 function getNumbers(){
     const candidate = [1,2,3,4,5,6,7,8,9];
@@ -11,12 +11,12 @@ function getNumbers(){
     return array;
 }
 
-class NumberBaseball extends Component {
+class NumberBaseball_class extends PureComponent {
     state = {
         result: '',
         value: '',
         answer: getNumbers(),
-        tries: [], // push 쓰면 안 돼요
+        tries: [], // push 쓰면 x
     };
 
     onSubmitForm = (e) => {
@@ -106,7 +106,7 @@ class NumberBaseball extends Component {
                 <ul>
                     {tries.map((v, i) => {
                         return (
-                            <Try key={`${i + 1}차 시도 :`} tryInfo={v} />
+                            <Try_class key={`${i + 1}차 시도 :`} tryInfo={v} />
                         );
                     })}
                 </ul>
@@ -115,4 +115,4 @@ class NumberBaseball extends Component {
     }
 }
 
-export default NumberBaseball;
+export default NumberBaseball_class;

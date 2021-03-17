@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import Try from './Try';
 
 const getNumbers = () => {
@@ -16,22 +16,24 @@ const NumberBaseball = () => {
     const [value, setValue] = useState('');
     const [result, setResult] = useState('');
     const [tries, setTries] = useState([]);
+    const inputEl = useRef(null);
 
     const onSubmitForm = useCallback((e) => {
         e.preventDefault();
         if (value === answer.join('')) {
         setTries((t) => ([
             ...t,
-            {
-                try: value,
-                result: '홈런!',
-            }
+                {
+                    try: value,
+                    result: '홈런!',
+                } 
             ]));
             setResult('홈런!');
             alert('게임을 다시 실행합니다.');
             setValue('');
             setAnswer(getNumbers());
             setTries([]);
+            inputEl.current.focus();
         } else { // 답 틀렸으면
             const answerArray = value.split('').map((v) => parseInt(v));
             let strike = 0;
@@ -42,6 +44,7 @@ const NumberBaseball = () => {
                 setValue('');
                 setAnswer(getNumbers());
                 setTries([]);
+                inputEl.current.focus();
             } else {
                 console.log('답은',answer.join(''));
                 for (let i=0; i<4; i+=1){
