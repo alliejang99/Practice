@@ -16,5 +16,9 @@
     "url": "https://github.com/alliejang99/Practice/issues"
   },
   "homepage": "https://github.com/alliejang99/Practice#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
 }

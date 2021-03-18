@@ -1,32 +1,37 @@
-import React, { useState, useRef, useCallback, useMemo } from 'react';
+import React, { useRef, useEffect } from 'react';
+import ChartJs from 'react-chartjs-2';
 
 function example() {
     const canvas = useRef(null);
     useEffect(() => {
-        const cfg = {
+        const config = {
         type: 'doughnut',
         data: {
             labels: [
             'Red',
             'Blue',
-            'Yellow'
             ],
             datasets: [{
             label: 'My First Dataset',
-            data: [300, 50, 100],
+            data: [60,30,10],
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)'
+                'rgba(0,0,0,0.1)'
             ],
             hoverOffset: 4
             }]
         }
         };
-        const chart = new Chart(canvas.current.getContext('2d'), cfg);
+        const chart = new Chart(canvas.current.getContext('2d'), config);
         return () => chart.destroy();
     });
-    return <div className="chartjs-wrapper"><canvas ref={canvas} className="chartjs"></canvas></div>;
+    return (
+        <div className="chartjs-wrapper">
+            <canvas ref={canvas} className="chartjs"></canvas>
+        </div>
+    )
+        
 }
 
 export default example;

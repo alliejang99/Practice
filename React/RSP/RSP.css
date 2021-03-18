@@ -1,0 +1,24 @@
+body {
+    background: #ccc;
+}
+.chartjs-render-monitor {
+    display: block;
+    animation: chartjs-render-animation 0.001s;
+    animation-duration: 0.001s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: chartjs-render-animation;
+}
+
+@keyframes chartjs-render-animation{
+    0% {
+        opacity: 0.99;
+    }
+    100% {
+        opacity: 1;
+    }
+}

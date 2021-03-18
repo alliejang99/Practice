@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader/root';
 
-import Chart from './Chart';
+import Lotto from './Lotto';
 
-const Hot = hot(Chart);
+const Hot = hot(Lotto);
 ReactDOM.render(<Hot />, document.querySelector('#root'));
