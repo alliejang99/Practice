@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ResponseChack from './ResponseChack';
+import ResponseCheck from './ResponseCheck';
 
-ReactDOM.render(<ResponseChack />, document.querySelector('#root'));
+ReactDOM.render(<ResponseCheck />, document.querySelector('#root'));

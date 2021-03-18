@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .btn_normal {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(0deg, #0bdda7 0%, #760bdd 0%, red 100%);
+            border-radius: 50%;
+        }
+        .btn_normal:after {
+            display: block;
+            content: "";
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+            border-radius: 50%;
+            background: linear-gradient(80deg, #0bdda7 0%, #760bdd 50%, red 100%);
+            transition: all 1s;
+        }
+        .btn_normal:hover:after {
+            opacity: 1;
+            background: linear-gradient(80deg, #0bdda7, #760bdd);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="btn_normal"></div>
+</body>
+</html>

@@ -10,12 +10,11 @@
 - react 
 - react-dom
 
-3. npm i -D webpack webpack-cli
+3. npm i -D --save-dev webpack webpack-cli webpack-dev-server
 - webpack 
 - webpack-cli
 
 * npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D
-* npm i -D --save-dev webpack webpack-dev-server
 
 ## babel install
 ### npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader 
@@ -30,7 +29,7 @@ npm i -D @babel/plugin-proposal-class-properties
 
 + error 
 // babel 설치
-npm install --save-dev babel-core babel-loader babel-preset-env
+npm install --save-dev babel-core babel-loader babel-preset-env @babel/preset-react
 
 // bulid 오류: address already in use
 1. cmd

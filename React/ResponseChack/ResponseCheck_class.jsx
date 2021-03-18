@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ResponseChack extends Component {
+class ResponseCheck extends Component {
     state = {
         state: 'waiting',
         message: '클릭하여 시작',
@@ -78,4 +78,4 @@ class ResponseChack extends Component {
         )
     }
 }
-export default ResponseChack;
+export default ResponseCheck;
