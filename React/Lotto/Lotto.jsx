@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Ball from './Ball';
 
 function getWinNumbers() {
@@ -16,11 +16,13 @@ function getWinNumbers() {
 }
 
 // hooks는 컴포넌트가 전체가 재실행 됨으로 useMemo를 사용하여 최적화
-// useMemo: 복잡한 함수 결괏값을 기억함 -> 반복하는 컴포넌트를 한 번만 실행되도록 함
-// useRef: 일반 값을 기억함
+// useCallback: 함수 자체(function 전체)를 기억함 / 문법: useMemo(callback, [변경되는값]); inputs이 변하기 전까지 기억을 함.
+// useMemo: 복잡한 함수 (리턴값 : [...winNumbers, bonusNumber])결괏값을 기억함 -> 반복하는 컴포넌트를 한 번만 실행되도록 함 / (() => {}, [input])
+// useRef: 특정한 '값'만 기억함 
+// https://likejirak.tistory.com/48
 
 const Lotto = () => {
-    const lottoNumbers = useMemo(() => getWinNumbers(), []) //((factory) => getWinNumbers(), [input])
+    const lottoNumbers = useMemo(() => getWinNumbers(), [])
     const [winNumbers, setWinNumbers] = useState(lottoNumbers);
     const [winBalls, setWinBalls] = useState([]);
     const [bonus, setBonus] = useState(null);
@@ -33,7 +35,7 @@ const Lotto = () => {
         // runTimeOuts
         for (let i = 0; i < winNumbers.length - 1; i++) {
             timeouts.current[i] = setTimeout(() => {
-                setWinBalls((prevBalls) => [...prevBalls, winNumbers[i]]); // 구조: () => []o / {}x
+                setWinBalls((prevBalls) => [...prevBalls, winNumbers[i]]); // 문법: () => []o / {}x
             }, (i + 1) * 1000);
         }
         timeouts.current[6] = setTimeout(() => {
@@ -50,14 +52,16 @@ const Lotto = () => {
                               // [](배열)에 요소가 있으면 componentDidMount랑 componentDidUpdate 둘 다 수행
 
     // 초기화 값
-    const onClickRedo = () => {
+    const onClickRedo = useCallback(() => { 
         console.log('onClickRedo')
+        console.log(winNumbers);
         setWinNumbers(getWinNumbers());
         setWinBalls([]);
         setBonus(null);
         setRedo(false);
         timeouts.current = [];
-    };
+    }, [winNumbers]);
+    // 버튼을 클릭 할 때 입력된 이전 값이 처음에 값만 호출 하지 않고 클릭할 때마다 호출 되었던 값이 나오도록 배열에 winNumbers를 입력
 
     return(
         <>
