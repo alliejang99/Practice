@@ -26,7 +26,7 @@
 - bable-loader: 바벨과 웹팩 연결
 
 ### 빌드시 오류
-npm i -D @babel/plugin-proposal-class-properties
+npm i -D @babel/plugin-proposal-class-properties 
 npm install react-hot-loader
 + error 
 // babel 설치
