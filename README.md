@@ -47,3 +47,5 @@ npm install --save-dev babel-core babel-loader babel-preset-env @babel/preset-re
 - 조건문 : https://github.com/alliejang99/Practice/blob/master/React/ResponseChack/ResponseChack.jsx
 
 - props와 state 연결 : https://github.com/alliejang99/Practice/blob/master/React/NumberBasball/NumberBaseball.jsx
+
+- setTimeout 다중 사용, use(Effect / Memo / Callback / Ref) 사용 : https://github.com/alliejang99/Practice/blob/master/React/Lotto/Lotto.jsx
