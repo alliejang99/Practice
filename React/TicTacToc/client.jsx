@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader/root';
 
-import TicTacToc from './TicTacToc';
+import TicTacToe from './TicTacToe';
 
-const Hot = hot(TicTacToc);
+const Hot = hot(TicTacToe);
 ReactDOM.render(<Hot />, document.querySelector('#root'));

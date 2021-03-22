@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useCallback } from 'react';
-import Table from './Table'; // TicTacToc -> Table -> Tr -> Td
+import Table from './Table'; // TicTacToe -> Table -> Tr -> Td
 
 const initialState = {
     winner: '',
@@ -23,6 +23,7 @@ export const CLICK_CELL = 'CLICK_CELL';
 export const CHANGE_TURN = 'CHANGE_TURN';
 export const RESET_GAME = 'RESET_GAME';
 
+// reducer에서 state값 컨트롤
 const reducer = (state, action) => {
     switch (action.type) {
         case SET_WINNER:
@@ -67,7 +68,7 @@ const reducer = (state, action) => {
     }
 };
 
-const TicTacToc = () => {
+const TicTacToe = () => {
     // const [winner, setWinner] = useState('');
     // const [turn, setTurn] = useState('O');
     // const [tableData, settableData] = useState( ['','',''], ['','',''], ['','',''] );
@@ -76,7 +77,7 @@ const TicTacToc = () => {
     const { tableData, turn, winner, recentCell } = state;
     const onClickTable = useCallback (() => {
         dispatch({ type: 'CHANGE_TURN', winner: 'O' }); //CHANGE_TURN: action.type ,  o: action.winner
-    }, []);
+    }, []); // dispatch는 리덕스의 action 역할
 
     useEffect(() => {
         const [row, cell] = recentCell;
@@ -126,4 +127,4 @@ const TicTacToc = () => {
     );
 };
 
-export default TicTacToc;
+export default TicTacToe;
