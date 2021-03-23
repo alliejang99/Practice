@@ -1,6 +1,7 @@
 # Practice
 
 ## npm
+(npx create-react-app ###)
 1. npm init
 - package name: (lecture) lecture
 - author: Allie
@@ -18,12 +19,17 @@
 - webpack-dev-server
 
 ## babel install
-### npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader 
+### npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader
 - @babel/core: 최신문법 변경
 - @babel/preset-env: 환경에 맞게 변경
 - @babel/preset-react: jsx, js 변경
 - @babel/preset-react: 리액트
 - bable-loader: 바벨과 웹팩 연결
+
+### Router
+- npm i react-router
+- npm i ract-router-dom
+- npm install --save-dev @babel/plugin-proposal-class-properties
 
 ### 빌드시 오류
 npm i -D @babel/plugin-proposal-class-properties 
@@ -36,7 +42,6 @@ npm install --save-dev babel-core babel-loader babel-preset-env @babel/preset-re
 1. cmd
 2. netstat -ano
 3. PID -> 작업관리자 -> 세부정보 
-
 
 #### [참고]
 - https://chimimode.github.io/2019-07-26-webpack-babel-project-setting/
